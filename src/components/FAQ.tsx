@@ -82,7 +82,7 @@ export default function FAQ() {
       answer: "We recommend 100% on-site custom craftsmanship, ensuring precision and design integrity, We also provide modular factory systems if client want to have."
     },
     {
-      question: "Can clients visit the site during execution?",
+      question: "Can clients visit the site during execution? ",
       answer: "Yes. One pre-scheduled weekly visit, accompanied by an AE designer, is permitted to ensure transparency and updates."
     },
     {
