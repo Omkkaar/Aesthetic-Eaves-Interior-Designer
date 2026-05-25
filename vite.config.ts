@@ -6,8 +6,7 @@ import {defineConfig, loadEnv} from 'vite';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-    base: '/Aesthetic-Eaves-Interior-Designer/', // Add this line - replace with your repo name
+    base: '/',
     plugins: [react(), tailwindcss()],
-    // ... rest of config
   };
 });
