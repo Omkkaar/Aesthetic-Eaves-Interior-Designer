@@ -16,11 +16,13 @@ jobs:
         with:
           node-version: '18'
       
+      - run: npm install -g npm@latest
+      
       - run: npm cache clean --force
       
       - run: rm -rf package-lock.json node_modules
       
-      - run: npm install --no-optional
+      - run: npm install
       
       - run: npm run build
       
