@@ -8,5 +8,13 @@ export default defineConfig(({mode}) => {
   return {
     base: '/',
     plugins: [react(), tailwindcss()],
+    build: {
+      rollupOptions: {
+        input: {
+          main: path.resolve(__dirname, 'index.html'),
+          thankYou: path.resolve(__dirname, 'thank-you.html')
+        }
+      }
+    },
   };
 });
