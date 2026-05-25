@@ -1,18 +1,9 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { motion } from 'motion/react';
-import { Check, Upload } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 export default function FounderAuthority() {
-  const [photo, setPhoto] = useState("https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=1000");
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const url = URL.createObjectURL(file);
-      setPhoto(url);
-    }
-  };
+  const photo = "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/omkar-kulkarni.jpg.png";
 
   const points = [
     "Holistic site & budget planning",
@@ -39,23 +30,6 @@ export default function FounderAuthority() {
                 loading="lazy"
               />
               
-              {/* Upload Overlay */}
-              <div 
-                onClick={() => fileInputRef.current?.click()}
-                className="absolute inset-0 bg-ink/40 opacity-0 group-hover/photo:opacity-100 transition-opacity flex flex-col items-center justify-center cursor-pointer backdrop-blur-[2px]"
-              >
-                <div className="bg-paper p-4 rounded-full text-ink mb-3 transform scale-90 group-hover/photo:scale-100 transition-transform">
-                  <Upload size={24} />
-                </div>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-paper font-accent">Upload New Portrait</span>
-              </div>
-              <input 
-                type="file" 
-                ref={fileInputRef}
-                onChange={handleUpload}
-                accept="image/*"
-                className="hidden"
-              />
             </div>
             <div className="absolute -bottom-8 -right-8 bg-brand-red p-8 shadow-2xl hidden lg:block border border-gold/20 z-10">
               <div className="font-serif text-3xl mb-1 text-paper">14+</div>

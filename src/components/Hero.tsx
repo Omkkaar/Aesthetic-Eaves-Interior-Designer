@@ -1,19 +1,11 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { Upload } from 'lucide-react';
 
 export default function Hero() {
-  const [logo, setLogo] = useState<string | null>(null);
-  const logoInputRef = useRef<HTMLInputElement>(null);
+  const logo = 'https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/3.png'; // Replace with actual logo path or URL
   const ref = useRef(null);
 
-  const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const url = URL.createObjectURL(file);
-      setLogo(url);
-    }
-  };
+  
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -44,28 +36,14 @@ export default function Hero() {
         {/* TOP ROW: Logo and Company Info */}
         <div className="w-full flex items-start justify-between max-w-7xl">
           {/* Logo - Top Left */}
-          <div 
-            onClick={() => logoInputRef.current?.click()}
-            className="group relative cursor-pointer flex items-center justify-center border border-dashed border-paper/10 hover:border-gold/40 transition-all duration-700 p-3 min-w-[100px] min-h-[100px] backdrop-blur-[2px] bg-paper/5 rounded-sm"
-          >
+          <div className="relative flex items-center justify-center border border-dashed border-paper/10 transition-all duration-700 p-3 min-w-[100px] min-h-[100px] backdrop-blur-[2px] bg-paper/5 rounded-sm">
             {logo ? (
-              <img src={logo} alt="Studio Logo" className="max-h-16 w-auto object-contain transition-transform duration-700 group-hover:scale-105" />
+              <img src={logo} alt="Studio Logo" className="max-h-16 w-auto object-contain transition-transform duration-700" />
             ) : (
               <div className="flex flex-col items-center">
-                <Upload className="text-paper/20 group-hover:text-gold transition-colors" size={20} />
-                <span className="text-[7px] uppercase tracking-[0.2em] text-paper/20 mt-2 font-accent">Logo</span>
+                <span className="text-[10px] uppercase tracking-[0.2em] text-paper/70 font-accent">Logo</span>
               </div>
             )}
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-ink/60 backdrop-blur-[1px]">
-              <span className="text-[7px] uppercase tracking-widest text-paper font-accent">Edit</span>
-            </div>
-            <input 
-              type="file" 
-              ref={logoInputRef}
-              onChange={handleLogoUpload}
-              accept="image/*"
-              className="hidden"
-            />
           </div>
 
           {/* Company Name - Middle Top (Centered Relatively) */}
