@@ -5,7 +5,7 @@ const initialProjects = [
   {
     title: "Bold Children Bedroom",
     category: "Residential Interior",
-    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/1%20Bold%20Children%20Bedroom.jpg",
+    image: "/img/1bold-children-bedroom.jpg",
     ratio: "aspect-[4/5]"
   },
   {

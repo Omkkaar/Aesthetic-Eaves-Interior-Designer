@@ -38,13 +38,13 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <LeadForm />
         <FounderAuthority />
         <MicroFilter />
         <Portfolio />
         <USPSection />
         <StudioApart />
         <Process />
-        <LeadForm />
         <GoogleReviews />
         <FAQ />
       </main>
@@ -60,4 +60,3 @@ export default function App() {
     </div>
   );
 }
-
