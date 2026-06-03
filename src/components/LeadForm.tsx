@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
 import { CheckCircle2, ShieldCheck, Clock } from 'lucide-react';
 
@@ -17,9 +17,23 @@ export default function LeadForm() {
       // Expedify usually sends success signals or changes URL
       // We listen for any indicator of success
       if (event.origin.includes('expedify.ai')) {
+        // form submission messages
         if (event.data === 'form-submitted' || (typeof event.data === 'string' && event.data.includes('success'))) {
           localStorage.setItem('expedify_form_submitted', 'true');
           setIsSubmitted(true);
+        }
+
+        // auto-resize: Expedify may post a message like { type: 'expedify-height', height: 1200 }
+        try {
+          const data = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
+          if (data && typeof data === 'object' && (data.height || data.type === 'expedify-height')) {
+            const h = data.height || data.value || data.h;
+            if (h && iframeRef.current) {
+              setIframeHeight(`${Number(h)}px`);
+            }
+          }
+        } catch (e) {
+          // ignore JSON parse errors for non-JSON messages
         }
       }
     };
@@ -27,6 +41,9 @@ export default function LeadForm() {
     window.addEventListener('message', handleMessage);
     return () => window.removeEventListener('message', handleMessage);
   }, []);
+
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const [iframeHeight, setIframeHeight] = useState<string>('80vh');
 
   return (
     <section className="pt-16 pb-16 md:pt-20 md:pb-20 bg-brand-red text-paper relative overflow-hidden" aria-label="Contact and Application Form">
@@ -82,14 +99,15 @@ export default function LeadForm() {
                 </div>
               ) : (
                 <div className="w-full overflow-hidden">
-                  <iframe 
-                    src="https://app.expedify.ai/forms/id/edb8d6c4-f4fc-4ee0-a4ca-d7849783c227/07d8aeea-6b9d-4d42-9cd9-5b3a632442eb" 
-                    className="w-full border-none block h-[1300px] sm:h-[1250px] md:h-[1140px] lg:h-[1050px]"
+                  <iframe
+                    ref={iframeRef}
+                    src="https://app.expedify.ai/forms/id/edb8d6c4-f4fc-4ee0-a4ca-d7849783c227/07d8aeea-6b9d-4d42-9cd9-5b3a632442eb"
+                    className="w-full border-none block"
                     frameBorder="0"
-                    style={{ width: '100%' }}
                     title="Expedify CRM Lead Form"
                     scrolling="no"
-                  ></iframe>
+                    style={{ width: '100%', height: iframeHeight, minHeight: '700px' }}
+                  />
                 </div>
               )}
             </div>
@@ -114,7 +132,7 @@ export default function LeadForm() {
           </div>
           
           {/* Footer note for context under the form */}
-          <p className="text-paper/40 text-[8px] md:text-[9px] uppercase tracking-widest text-center mt-4 font-accent px-4 leading-relaxed pb-2">
+          <p className="text-paper/40 text-[8px] md:text-[9px] uppercase tracking-widest text-center mt-2 font-accent px-4 leading-relaxed">
             Confidential Application  •  Bespoke Excellence Guaranteed
           </p>
         </motion.div>
