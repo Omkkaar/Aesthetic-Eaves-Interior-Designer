@@ -36,7 +36,7 @@ export default function Hero() {
         {/* TOP ROW: Logo and Company Info */}
         <div className="w-full flex items-start justify-between max-w-7xl">
           {/* Logo - Top Left */}
-          <div className="hero-logo relative flex items-center justify-center border border-dashed border-paper/10 transition-all duration-700 p-3 min-w-[100px] min-h-[100px] backdrop-blur-[2px] bg-paper/5 rounded-sm">
+          <div className="hero-logo relative hidden sm:flex items-center justify-center border border-dashed border-paper/10 transition-all duration-700 p-3 min-w-[100px] min-h-[100px] backdrop-blur-[2px] bg-paper/5 rounded-sm">
             {logo ? (
               <img src={logo} alt="Studio Logo" className="max-h-16 w-auto object-contain transition-transform duration-700" />
             ) : (
