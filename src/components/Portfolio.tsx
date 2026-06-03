@@ -11,13 +11,13 @@ const initialProjects = [
   {
     title: "Modern Master Bedroom",
     category: "Modern Living",
-    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/2ModernMasterBedroom.jpg",
+    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/4ModernMasterBedroom.jpg",
     ratio: "aspect-[3/4]"
   },
   {
     title: "Modern Bedroom",
     category: "Luxury Housing",
-    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/3ModernBedroom.jpg",
+    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/2ModernBedroom.jpg",
     ratio: "aspect-[4/5]"
   },
   {
@@ -29,7 +29,7 @@ const initialProjects = [
   {
     title: "Classic Bedroom",
     category: "Contemporary Space",
-    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/4ClassicBedroom.jpg",
+    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/3ClassicBedroom.jpg",
     ratio: "aspect-[3/4]"
   },
   {
