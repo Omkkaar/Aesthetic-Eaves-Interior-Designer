@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 
 export default function Hero() {
-  const logo = 'https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/3.png'; // Replace with actual logo path or URL
+  const logo = 'https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/Pi7_image_tool.jpeg'; // Replace with actual logo path or URL
   const ref = useRef(null);
 
   

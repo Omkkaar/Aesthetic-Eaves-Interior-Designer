@@ -5,37 +5,37 @@ const initialProjects = [
   {
     title: "Bold Children Bedroom",
     category: "Residential Interior",
-    image: "/img/1bold-children-bedroom.jpg",
+    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/1BoldChildrenBedroom.jpg",
     ratio: "aspect-[4/5]"
   },
   {
     title: "Modern Master Bedroom",
     category: "Modern Living",
-    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/4%20Modern%20Master%20Bedroom.jpg",
+    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/2ModernMasterBedroom.jpg",
     ratio: "aspect-[3/4]"
   },
   {
     title: "Modern Bedroom",
     category: "Luxury Housing",
-    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/2%20Modern%20Bedroom.jpg",
+    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/3ModernBedroom.jpg",
     ratio: "aspect-[4/5]"
   },
   {
     title: "Modern Living Hall",
     category: "Premium Apartment",
-    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/5%20Modern%20Living%20Hall.jpg",
+    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/5ModernLivingHall.jpg",
     ratio: "aspect-[1/1.2]"
   },
   {
     title: "Classic Bedroom",
     category: "Contemporary Space",
-    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/3%20Classic%20Bedroom.jpg",
+    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/4ClassicBedroom.jpg",
     ratio: "aspect-[3/4]"
   },
   {
     title: "Contemporary Living",
     category: "Premium Residence",
-    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/6%20Contemporary%20Living.jpg",
+    image: "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/6ContemporaryLiving.jpg",
     ratio: "aspect-[4/5]"
   }
 ];

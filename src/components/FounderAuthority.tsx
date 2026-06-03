@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { Check } from 'lucide-react';
 
 export default function FounderAuthority() {
-  const photo = "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/omkar-kulkarni.jpg.png";
+  const photo = "https://raw.githubusercontent.com/Omkkaar/Aesthetic-Eaves-Interior-Designer/refs/heads/main/img/omkar-kulkarni.jp.jpeg";
 
   const points = [
     "Holistic site & budget planning",
